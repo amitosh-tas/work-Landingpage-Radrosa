@@ -111,7 +111,7 @@ export default function App() {
               <article className="feature">
                 <h3>Credits you can see</h3>
                 <p>Your balance shows how many previews are left, with a warning before it runs out.</p>
-                <div className="mock balance" aria-hidden="true"><span className="mini-ring" /><span><b>2,480</b> credits<br />248 previews left</span></div>
+                <div className="mock balance" aria-hidden="true"><span className="mini-ring" /><span><b>2,480</b> credits<br />2,480 previews left</span></div>
               </article>
             </div>
           </div>

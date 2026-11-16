@@ -5,7 +5,7 @@ export const SHOPIFY_APP_URL = 'https://apps.shopify.com/lookon';
 export const CONTACT_EMAIL = 'hello@lookon.app';
 
 // Current credit pack pricing.
-export const CREDITS_PER_IMAGE = 10;
+export const CREDITS_PER_IMAGE = 1;
 export const CURRENCY = 'USD';
 export const PACKS = [
   { price: 20, credits: 94 },

@@ -7,7 +7,7 @@ const SCAN_MS = SCAN_PASS_MS * SCAN_COUNT;
 
 const previewAssets = {
   base: '/previews/stock_preview.jpg',
-  // The existing file is spelled "earings.jpg" in public/previews.
+  // The existing file is spelled "earings.jpg" in public/previews...
   earrings: '/previews/earrings.jpg',
   hat: '/previews/had.jpg',
   glasses: '/previews/glasses.jpg',

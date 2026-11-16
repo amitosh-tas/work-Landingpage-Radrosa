@@ -4,14 +4,14 @@
 export const SHOPIFY_APP_URL = 'https://apps.shopify.com/lookon';
 export const CONTACT_EMAIL = 'hello@lookon.app';
 
-// Credit packs, as set in the lookOn super admin (Credit logic). Stores see price, credits and images only.
+// Current credit pack pricing.
 export const CREDITS_PER_IMAGE = 10;
 export const CURRENCY = 'USD';
 export const PACKS = [
-  { price: 10, credits: 500 },
-  { price: 20, credits: 1000 },
-  { price: 50, credits: 2500, popular: true },
-  { price: 100, credits: 5000 },
+  { price: 20, credits: 94, cost: 15, profit: 5 },
+  { price: 80, credits: 376, cost: 60, profit: 20 },
+  { price: 1000, credits: 4700, cost: 750, profit: 250 },
+  { price: 100000, credits: 470000, cost: 75000, profit: 25000 },
 ];
 
 // What the demo can put on the shopper.

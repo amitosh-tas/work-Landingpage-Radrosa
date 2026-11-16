@@ -14,7 +14,7 @@ const WEARS = ['Earrings', 'Necklaces', 'Nose pins', 'Glasses', 'Sunglasses', 'H
 
 const FAQ = [
   ['Do I need to set anything up per product?', 'No. lookOn reads your Shopify products and works out how each one is worn from its type, tags and title. You can correct any product or a whole product type in the app, and it follows the variant the shopper picks.'],
-  ['What does a preview cost?', `One preview uses ${CREDITS_PER_IMAGE} credits. Packs start at $10 for 500 credits (50 previews). Credits are only used when a shopper actually gets a preview.`],
+  ['What does a preview cost?', `One preview uses ${CREDITS_PER_IMAGE} credits. Packs start at $20 for 94 credits. Credits are only used when a shopper actually gets a preview.`],
   ['What happens when credits run out?', 'Try-on pauses on your store and you choose what shoppers see: a short message or no block at all. Buy a pack and it switches back on right away.'],
   ['Can I limit how much each shopper uses?', 'Yes. Give a few free previews, then ask for an email or a sign-in to their account. You can also cap previews per product and per day.'],
   ['Are shopper photos stored?', 'No. Photos are used to make the preview and are not saved. Shoppers confirm they are 18 or over and that the photo is of them before anything is sent.'],

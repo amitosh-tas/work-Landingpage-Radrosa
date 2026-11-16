@@ -175,8 +175,6 @@ section { scroll-margin-top: 80px; }
 .flag { position: absolute; top: -12px; left: 22px; background: var(--lens); color: #fff; font-size: 12px; font-weight: 800; padding: 4px 10px; border-radius: 999px; }
 .pack-price { font: 800 40px/1 var(--display); letter-spacing: -0.03em; margin-bottom: 12px; }
 .pack-credits { font-size: 16px; } .pack-credits b { font-size: 18px; }
-.pack-economics { display: flex; justify-content: space-between; gap: 10px; margin-top: 8px; padding: 10px 0; border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); color: var(--muted); font-size: 13px; }
-.pack-economics b { color: var(--ink); font-weight: 700; }
 .pack-images { color: var(--lens-deep); font-weight: 700; }
 .pack-unit { color: var(--muted); font-size: 14px; margin-top: 8px; padding-top: 10px; border-top: 1px dashed var(--line); }
 .calc { margin-top: 22px; display: grid; grid-template-columns: 1.2fr 1fr; gap: 0; border-radius: var(--r-lg); overflow: hidden; background: var(--ink); color: #fff; }

@@ -44,10 +44,6 @@ export default function Pricing() {
               {p.popular && <span className="flag">Most chosen</span>}
               <p className="pack-price">{money(p.price)}</p>
               <p className="pack-credits"><b>{num(p.credits)}</b> credits</p>
-              <div className="pack-economics">
-                <span>Cost <b>{money(p.cost)}</b></span>
-                <span>Profit <b>{money(p.profit)}</b></span>
-              </div>
               <p className="pack-images">{num(p.credits / CREDITS_PER_IMAGE)} try-on images</p>
               <p className="pack-unit">{money(p.price / (p.credits / CREDITS_PER_IMAGE))} per image</p>
             </article>

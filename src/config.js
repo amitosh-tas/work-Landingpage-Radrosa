@@ -8,10 +8,10 @@ export const CONTACT_EMAIL = 'hello@lookon.app';
 export const CREDITS_PER_IMAGE = 10;
 export const CURRENCY = 'USD';
 export const PACKS = [
-  { price: 20, credits: 94, cost: 15, profit: 5 },
-  { price: 80, credits: 376, cost: 60, profit: 20 },
-  { price: 1000, credits: 4700, cost: 750, profit: 250 },
-  { price: 100000, credits: 470000, cost: 75000, profit: 25000 },
+  { price: 20, credits: 94 },
+  { price: 80, credits: 376 },
+  { price: 1000, credits: 4700 },
+  { price: 100000, credits: 470000 },
 ];
 
 // What the demo can put on the shopper.

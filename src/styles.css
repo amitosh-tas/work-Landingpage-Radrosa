@@ -42,7 +42,7 @@ p { margin: 0; }
 .btn.primary:hover { transform: translateY(-1px); box-shadow: 0 1px 0 #ffffff20 inset, 0 12px 28px #17151f3d; }
 .btn.ghost { background: #fff; color: var(--ink); box-shadow: inset 0 0 0 1.5px #d7d3e4; }
 .btn.ghost:hover { box-shadow: inset 0 0 0 1.5px var(--ink); }
-.bag { width: 18px; height: 18px; fill: #95bf47; stroke: #fff; stroke-width: 1.6; stroke-linejoin: round; }
+.bag { width: 18px; height: 18px; flex: none; object-fit: contain; }
 
 /* ---------- nav ---------- */
 .nav { position: sticky; top: 0; z-index: 20; background: #f7f6fbeb; backdrop-filter: saturate(1.4) blur(14px); -webkit-backdrop-filter: saturate(1.4) blur(14px); border-bottom: 1px solid #e6e3efcc; }

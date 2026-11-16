@@ -4,7 +4,12 @@ import Pricing from './components/Pricing.jsx';
 import { SHOPIFY_APP_URL, CONTACT_EMAIL, CREDITS_PER_IMAGE } from './config.js';
 
 const ShopifyBag = () => (
-  <svg viewBox="0 0 24 24" aria-hidden="true" className="bag"><path d="M6 8h12l-1 12H7L6 8z" /><path d="M9 8V6.5a3 3 0 0 1 6 0V8" fill="none" /></svg>
+  <img
+    className="bag"
+    src="https://cdn.shopify.com/shopifycloud/brochure/assets/brand-assets/shopify-logo-shopping-bag-full-color-66166b2e55d67988b56b4bd28b63c271e2b9713358cb723070a92bde17ad7d63.svg"
+    alt=""
+    aria-hidden="true"
+  />
 );
 const Install = ({ children = 'Add to Shopify', big }) => (
   <a className={`btn primary ${big ? 'big' : ''}`} href={SHOPIFY_APP_URL} target="_blank" rel="noreferrer"><ShopifyBag />{children}</a>

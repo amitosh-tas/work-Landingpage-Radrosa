@@ -6,12 +6,13 @@ const SCAN_COUNT = 3;
 const SCAN_MS = SCAN_PASS_MS * SCAN_COUNT;
 
 const previewAssets = {
-  base: '/previews/stock_preview.jpg',
+  base: '/previews/stock_preview.webp',
   // The existing file is spelled "earings.jpg" in public/previews...
-  earrings: '/previews/earrings.jpg',
-  hat: '/previews/had.jpg',
-  glasses: '/previews/glasses.jpg',
-  necklace: '/previews/necklace.jpg',
+  earrings: '/previews/earrings.webp',
+  // hat: '/previews/had.jpg',
+  hat: '/previews/hat.webp',
+  glasses: '/previews/glasses.webp',
+  necklace: '/previews/necklace.webp',
 };
 
 export default function ScanDemo() {

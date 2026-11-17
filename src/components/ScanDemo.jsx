@@ -20,6 +20,7 @@ export default function ScanDemo() {
   const [scanCycle, setScanCycle] = useState(0);
   const [isScanning, setIsScanning] = useState(true);
   const [scanStep, setScanStep] = useState(0);
+  const [isPreviewLoaded, setIsPreviewLoaded] = useState(false);
   const product = DEMO_PRODUCTS.find(({ id }) => id === selectedCategory) ?? DEMO_PRODUCTS[0];
   const reducedMotion = typeof window !== 'undefined' && window.matchMedia?.('(prefers-reduced-motion: reduce)').matches;
 
@@ -45,6 +46,7 @@ export default function ScanDemo() {
   const chooseCategory = (id) => {
     if (id === selectedCategory) return;
     setSelectedCategory(id);
+    setIsPreviewLoaded(false);
     setIsScanning(true);
     setScanStep(0);
     setScanCycle((cycle) => cycle + 1);
@@ -69,13 +71,15 @@ export default function ScanDemo() {
         <div className="arrow" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M5 12h13M13 6l6 6-6 6" /></svg></div>
 
         <figure className={`frame after ${isScanning ? 'is-scanning' : ''}`}>
+          {!isPreviewLoaded && <div className="preview-skeleton" aria-hidden="true" />}
           {isScanning && <div className="placeholder" aria-hidden="true"><span>Matching your preview…</span></div>}
           <img
             key={product.id}
-            className="demo-photo preview-photo"
+            className={`demo-photo preview-photo ${isPreviewLoaded ? 'is-loaded' : ''}`}
             src={previewAssets[product.id]}
             alt={`Preview wearing ${product.kind.toLowerCase()}`}
             decoding="async"
+            onLoad={() => setIsPreviewLoaded(true)}
           />
           <figcaption aria-live="polite">Preview · {product.kind}</figcaption>
         </figure>

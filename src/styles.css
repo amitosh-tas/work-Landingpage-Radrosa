@@ -74,6 +74,7 @@ h1 { font-size: clamp(48px, 7vw, 88px); line-height: 0.95; font-weight: 800; let
 .frame .portrait { width: 100%; height: 100%; }
 .demo-photo { width: 100%; height: 100%; object-fit: cover; }
 .preview-photo { opacity: 1; visibility: visible; transition: opacity 0.28s ease-out; }
+.preview-photo:not(.is-loaded) { opacity: 0; }
 .after.is-scanning .preview-photo { opacity: 0; visibility: hidden; }
 .frame figcaption { position: absolute; left: 12px; top: 12px; z-index: 3; font-size: 12.5px; font-weight: 700; background: #ffffffe0; color: var(--ink); padding: 5px 10px; border-radius: 999px; backdrop-filter: blur(6px); }
 .frame.after { transform: translateY(26px); }
@@ -101,6 +102,7 @@ h1 { font-size: clamp(48px, 7vw, 88px); line-height: 0.95; font-weight: 800; let
 .ring { --p: 0; width: 26px; height: 26px; flex: none; border-radius: 50%; background: radial-gradient(closest-side, #121422 70%, transparent 72%), conic-gradient(var(--scan) calc(var(--p) * 1%), #ffffff2e 0); animation: fill linear forwards; }
 
 /* the preview, revealed when the scan finishes */
+.after .preview-skeleton { position: absolute; inset: 0; z-index: 1; background: linear-gradient(110deg, #f3f1f9 8%, #fff 18%, #f3f1f9 33%); background-size: 200% 100%; animation: preview-shimmer 1.4s ease-in-out infinite; }
 .after .placeholder { position: absolute; inset: 0; z-index: 2; display: grid; place-items: center; background: repeating-linear-gradient(135deg, #f3f1f9 0 12px, #efecf7 12px 24px); color: var(--muted); font-weight: 700; font-size: 14px; }
 .after .reveal { position: absolute; inset: 0; clip-path: inset(0 100% 0 0); transition: clip-path 0.9s cubic-bezier(0.65, 0, 0.35, 1); }
 .after.is-revealed .reveal { clip-path: inset(0 0 0 0); }
@@ -120,6 +122,8 @@ h1 { font-size: clamp(48px, 7vw, 88px); line-height: 0.95; font-weight: 800; let
 @keyframes band { from { mask-position: 0 -40%; -webkit-mask-position: 0 -40%; } to { mask-position: 0 140%; -webkit-mask-position: 0 140%; } }
 @keyframes breathe { 50% { transform: translate(var(--d), var(--d)); opacity: 0.55; } }
 @keyframes pop { from { opacity: 0; transform: scale(0.85); } to { opacity: 1; transform: none; } }
+@keyframes preview-shimmer { to { background-position-x: -200%; } }
+@media (prefers-reduced-motion: reduce) { .after .preview-skeleton { animation: none; } }
 
 /* ---------- what it works with ---------- */
 .wears { border-block: 1px solid var(--line); background: #fff; overflow: hidden; }

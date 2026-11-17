@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import ScanDemo from './components/ScanDemo.jsx';
 import Pricing from './components/Pricing.jsx';
+import PrivacyPolicy from './components/PrivacyPolicy.jsx';
 import { SHOPIFY_APP_URL, CONTACT_EMAIL, CREDITS_PER_IMAGE } from './config.js';
 
 const ShopifyBag = () => (
@@ -26,7 +27,7 @@ const FAQ = [
   ['Can I change the wording on my store?', 'Every line the shopper sees, from the button to the error messages, can be changed in the app or in your theme editor.'],
 ];
 
-export default function App() {
+function LandingPage() {
   const [open, setOpen] = useState(0);
   return (
     <>
@@ -148,9 +149,15 @@ export default function App() {
         <div className="wrap foot-in">
           <a className="logo" href="#top" aria-label="lookOn home"><img className="brand-logo" src="/lookon-logo.svg" alt="" /></a>
           <p>Previews are made with AI and are approximate: colour, size and fit can differ a little from the real product.</p>
-          <p>© {new Date().getFullYear()} lookOn. <a href={`mailto:${CONTACT_EMAIL}`}>Contact us</a></p>
+          <p>© {new Date().getFullYear()} lookOn. <a href="/privacy">Privacy policy</a> · <a href={`mailto:${CONTACT_EMAIL}`}>Contact us</a></p>
         </div>
       </footer>
     </>
   );
+}
+
+export default function App() {
+  return window.location.pathname === '/privacy' || window.location.pathname === '/privacy/'
+    ? <PrivacyPolicy />
+    : <LandingPage />;
 }

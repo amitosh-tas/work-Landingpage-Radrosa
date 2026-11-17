@@ -45,7 +45,6 @@ export default function Pricing() {
               <p className="pack-price">{money(p.price)}</p>
               <p className="pack-credits"><b>{num(p.credits)}</b> credits</p>
               <p className="pack-images">{num(p.credits / CREDITS_PER_IMAGE)} try-on images</p>
-              <p className="pack-unit">{money(p.price / (p.credits / CREDITS_PER_IMAGE))} per image</p>
             </article>
           ))}
         </div>
